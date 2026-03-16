@@ -44,4 +44,9 @@ public class ReservationController {
     public ResponseEntity<List<Reservation>> getByEquipmentTag(@PathVariable String tag) {
         return ResponseEntity.ok(reservationService.getByEquipmentTag(tag));
     }
+
+    @GetMapping("/student/{name}")
+    public ResponseEntity<List<Reservation>> getByStudentName(@PathVariable String name) {
+        return ResponseEntity.ok(reservationService.getReservationsByStudentName(name));
+    }
 }

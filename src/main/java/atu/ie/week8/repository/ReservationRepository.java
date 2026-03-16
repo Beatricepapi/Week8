@@ -9,5 +9,5 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
 
     // Custom query method (Part B requirement)
     List<Reservation> findByEquipmentTag(String equipmentTag);
-
+    List<Reservation> findByStudentName(String studentName);
 }
